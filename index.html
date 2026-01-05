@@ -12,16 +12,20 @@ import {
   ArrowLeft, 
   Smartphone, 
   RotateCcw,
-  Save,
   Truck,
   Coffee,
   MessageCircle
 } from 'lucide-react';
 
-// 本地存儲的 Key
-const STORAGE_KEY = 'CUTE_INVENTORY_LOCAL_V1_FINAL_NO_HIST';
+/**
+ * 庫存點點名 - 定案本地部署版
+ * 顏色：高級奶茶色系 (Oatmeal & Caramel)
+ * 功能：大字體、自動存檔、快速補貨、LINE 發送
+ */
 
-// 初始品項數據 (包含 full 欄位代表補滿後的數量)
+const STORAGE_KEY = 'SHOP_INVENTORY_MASTER_SAVE';
+
+// 初始品項數據
 const INITIAL_DATA = [
   // 茶葉
   { id: 45, category: '茶葉 🍵', name: '四季春茶', threshold: 1, full: 5, unit: '包', current: 0, notified: false },
@@ -42,15 +46,15 @@ const INITIAL_DATA = [
   { id: 14, category: '果醬 🍓', name: '蘋果醬', threshold: 0.1, full: 1, unit: '瓶', info: '少於300cc', current: 0, notified: false },
   { id: 15, category: '果醬 🍓', name: '藍莓醬', threshold: 0.1, full: 1, unit: '瓶', info: '少於300cc', current: 0, notified: false },
   // 凍果汁
-  { id: 16, category: '凍果汁 ❄️', name: '檸檬汁', threshold: 0, full: 5, unit: '庫', info: '無庫存', current: 0, notified: false },
-  { id: 17, category: '凍果汁 ❄️', name: '芒果醬(凍)', threshold: 0, full: 5, unit: '庫', info: '無庫存', current: 0, notified: false },
-  { id: 18, category: '凍果汁 ❄️', name: '甘蔗汁', threshold: 1, full: 5, unit: '庫', info: '剩1', current: 0, notified: false },
-  { id: 19, category: '凍果汁 ❄️', name: '百香果汁', threshold: 0, full: 5, unit: '庫', info: '無庫存', current: 0, notified: false },
-  { id: 20, category: '凍果汁 ❄️', name: '柳丁汁', threshold: 0, full: 5, unit: '庫', info: '無庫存', current: 0, notified: false },
+  { id: 16, category: '凍果汁 ❄️', name: '檸檬汁', threshold: 0, full: 5, unit: '庫', info: '無庫存告', current: 0, notified: false },
+  { id: 17, category: '凍果汁 ❄️', name: '芒果醬(凍)', threshold: 0, full: 5, unit: '庫', info: '無庫存告', current: 0, notified: false },
+  { id: 18, category: '凍果汁 ❄️', name: '甘蔗汁', threshold: 1, full: 5, unit: '庫', info: '剩1告', current: 0, notified: false },
+  { id: 19, category: '凍果汁 ❄️', name: '百香果汁', threshold: 0, full: 5, unit: '庫', info: '無庫存告', current: 0, notified: false },
+  { id: 20, category: '凍果汁 ❄️', name: '柳丁汁', threshold: 0, full: 5, unit: '庫', info: '無庫存告', current: 0, notified: false },
   // 哈蒂廠商
   { id: 21, category: '哈蒂 🚚', name: '煉乳', threshold: 0, full: 12, unit: '庫', info: '冰箱空', current: 0, notified: false },
-  { id: 22, category: '哈蒂 🚚', name: '奶精', threshold: 1, full: 10, unit: '庫', info: '剩1', current: 0, notified: false },
-  { id: 23, category: '哈蒂 🚚', name: '冬瓜塊', threshold: 1, full: 10, unit: '庫', info: '剩1', current: 0, notified: false },
+  { id: 22, category: '哈蒂 🚚', name: '奶精', threshold: 1, full: 10, unit: '庫', info: '剩1告', current: 0, notified: false },
+  { id: 23, category: '哈蒂 🚚', name: '冬瓜塊', threshold: 1, full: 10, unit: '庫', info: '剩1告', current: 0, notified: false },
   { id: 24, category: '哈蒂 🚚', name: '珍珠', threshold: 0.33, full: 5, unit: '包', info: '剩1/3', current: 0, notified: false },
   { id: 25, category: '哈蒂 🚚', name: '蔗糖', threshold: 0.33, full: 2, unit: '桶', info: '剩1/3', current: 0, notified: false },
   { id: 26, category: '哈蒂 🚚', name: '粗吸管', threshold: 2, full: 10, unit: '包', current: 0, notified: false },
@@ -61,7 +65,7 @@ const INITIAL_DATA = [
   { id: 30, category: '粉類 🧂', name: '抹茶粉', threshold: 0.1, full: 1, unit: '庫', info: '少於200g', current: 0, notified: false },
   { id: 31, category: '粉類 🧂', name: '可可粉', threshold: 0.1, full: 1, unit: '庫', info: '少於200g', current: 0, notified: false },
   // 豆類
-  { id: 32, category: '豆類 🫘', name: '綠豆', threshold: 1, full: 5, unit: '包', info: '剩1', current: 0, notified: false },
+  { id: 32, category: '豆類 🫘', name: '綠豆', threshold: 1, full: 5, unit: '包', info: '剩1告', current: 0, notified: false },
   // 五穀雜糧
   { id: 33, category: '五穀 🌾', name: '二砂', threshold: 0.1, full: 10, unit: '庫', info: '剩半罐', current: 0, notified: false },
   { id: 34, category: '五穀 🌾', name: '紅糖液', threshold: 0.1, full: 5, unit: '庫', info: '剩半包', current: 0, notified: false },
@@ -71,7 +75,7 @@ const INITIAL_DATA = [
   { id: 37, category: '酷朋 📦', name: '沐浴乳', threshold: 0, full: 3, unit: '庫', current: 0, notified: false },
   { id: 38, category: '酷朋 📦', name: '洗碗精', threshold: 0, full: 5, unit: '庫', current: 0, notified: false },
   { id: 39, category: '酷朋 📦', name: '保鮮膜', threshold: 0, full: 3, unit: '庫', current: 0, notified: false },
-  // 容器
+  // 容器 (含袋子)
   { id: 40, category: '容器 🥤', name: '奶酪杯', threshold: 1, full: 10, unit: '條', current: 0, notified: false },
   { id: 41, category: '容器 🥤', name: '小鬆餅盒', threshold: 20, full: 100, unit: '個', current: 0, notified: false },
   { id: 42, category: '容器 🥤', name: '大鬆餅盒', threshold: 20, full: 100, unit: '個', current: 0, notified: false },
@@ -83,6 +87,7 @@ const INITIAL_DATA = [
 ];
 
 export default function App() {
+  // --- 狀態初始化 ---
   const [items, setItems] = useState(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
@@ -90,10 +95,13 @@ export default function App() {
         const parsed = JSON.parse(saved);
         const existingIds = new Set(parsed.map(i => i.id));
         const missingItems = INITIAL_DATA.filter(i => !existingIds.has(i.id));
+        
+        // 同步並補全欄位
         const syncedItems = parsed.map(item => {
           const original = INITIAL_DATA.find(i => i.id === item.id);
           return original ? { ...item, full: original.full, threshold: original.threshold, category: original.category } : item;
         });
+        
         return [...syncedItems, ...missingItems];
       } catch (e) { return INITIAL_DATA; }
     }
@@ -105,7 +113,7 @@ export default function App() {
   const [showCopyMsg, setShowCopyMsg] = useState(false);
   const [saveFlash, setSaveFlash] = useState(false);
 
-  // 自動保存
+  // --- 自動保存邏輯 ---
   const autoSave = (newItems) => {
     setItems(newItems);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(newItems));
@@ -163,8 +171,8 @@ export default function App() {
   }, [items, searchTerm]);
 
   const getMessageText = () => {
-    const timestamp = new Date().toLocaleString('zh-TW', { hour12: false });
-    const header = `媽媽/爸爸，這是今日(${timestamp})的補貨清單：\n--------------------\n`;
+    const dateStr = new Date().toLocaleDateString('zh-TW');
+    const header = `媽媽/爸爸，這是今日(${dateStr})的補貨清單：\n--------------------\n`;
     const body = lowStockItems.length > 0 
       ? lowStockItems.map(i => `📍 ${i.name}: 剩 ${i.current} ${i.unit} ${i.info ? `[${i.info}]` : ''}`).join('\n')
       : '目前庫存都很足夠喔！✨';
@@ -211,7 +219,7 @@ export default function App() {
               </div>
             </div>
             
-            <div className="flex bg-stone-100 p-1.5 rounded-2xl border border-stone-200 shadow-inner overflow-x-auto no-scrollbar">
+            <div className="flex bg-stone-100 p-1.5 rounded-2xl border border-stone-200 shadow-inner">
               <button onClick={() => setView('all')} className={`px-5 py-2.5 rounded-xl text-sm font-black transition-all whitespace-nowrap ${view === 'all' ? 'bg-[#A68A64] text-white shadow-md' : 'text-stone-400'}`}>清點</button>
               <button onClick={() => setView('report')} className={`px-5 py-2.5 rounded-xl text-sm font-black transition-all whitespace-nowrap ${view === 'report' ? 'bg-[#A68A64] text-white shadow-md' : 'text-stone-400'}`}>告知</button>
             </div>
@@ -231,7 +239,7 @@ export default function App() {
           )}
         </header>
 
-        {/* View Switch */}
+        {/* List View */}
         {view === 'all' && (
           <div className="space-y-5">
             {Object.keys(groupedItems).map(category => (
@@ -287,6 +295,7 @@ export default function App() {
           </div>
         )}
 
+        {/* Report View */}
         {view === 'report' && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="bg-white rounded-[40px] p-8 border-4 border-dashed border-[#DBC4B0] text-center relative overflow-hidden shadow-xl">
@@ -317,14 +326,14 @@ export default function App() {
           </div>
         )}
 
-        {/* 提示氣泡 */}
+        {/* Toast */}
         {showCopyMsg && (
           <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#5D4037]/95 text-white px-10 py-5 rounded-full font-black flex items-center gap-3 animate-bounce shadow-2xl z-50 text-lg">
             <Zap fill="#D4A373" className="text-[#D4A373]" /> 複製成功
           </div>
         )}
 
-        {/* 底部導覽欄 */}
+        {/* Tab Bar */}
         {view === 'all' && (
           <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-2xl z-40">
             <div className="flex items-center justify-between p-5 bg-[#5D4037] rounded-[36px] text-white shadow-2xl border-b-4 border-[#3E2723]">
