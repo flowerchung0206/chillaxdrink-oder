@@ -1,379 +1,352 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.65">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4d5055; -webkit-text-stroke: #4d5055}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #093c94; -webkit-text-stroke: #093c94}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 16.0px}
-    span.s1 {font-kerning: none; background-color: #ecf1f7}
-    span.s2 {font-kerning: none; color: #fb0007; background-color: #ecf1f7; -webkit-text-stroke: 0px #fb0007}
-    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #ecf1f7; -webkit-text-stroke: 0px #2a2a2a}
-    span.s4 {font-kerning: none; color: #6b0001; background-color: #ecf1f7; -webkit-text-stroke: 0px #6b0001}
-    span.s5 {font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s6 {font-kerning: none; color: #0000ff; background-color: #ecf1f7; -webkit-text-stroke: 0px #0000ff}
-    span.s7 {font: 14.0px 'PingFang TC'; font-kerning: none; background-color: #ecf1f7}
-    span.s8 {font-kerning: none; color: #6f0ec3; background-color: #ecf1f7; -webkit-text-stroke: 0px #6f0ec3}
-    span.s9 {font-kerning: none; color: #137646; background-color: #ecf1f7; -webkit-text-stroke: 0px #137646}
-    span.s10 {font-kerning: none; color: #093c94; background-color: #ecf1f7; -webkit-text-stroke: 0px #093c94}
-    span.s11 {font-kerning: none}
-    span.s12 {font: 14.0px 'Apple Color Emoji'; font-kerning: none; background-color: #ecf1f7}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">html</span><span class="s5"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s1">"zh-TW"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s6">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s5"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">title</span><span class="s3">&gt;</span><span class="s7">每日清點小本本</span><span class="s3">&lt;/</span><span class="s4">title</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- React &amp; Babel CDN --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/react@18/umd/react.production.min.js"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/@babel/standalone/babel.min.js"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Tailwind CSS CDN --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Lucide Icons --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/lucide@latest"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s8">@keyframes</span><span class="s5"> </span><span class="s1">heartBreathe</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">0%</span><span class="s1">, </span><span class="s9">100%</span><span class="s1"> { </span><span class="s2">transform:</span><span class="s1"> </span><span class="s10">scale(</span><span class="s9">1</span><span class="s10">)</span><span class="s1">; </span><span class="s2">opacity:</span><span class="s1"> </span><span class="s9">0.7</span><span class="s1">; }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">50%</span><span class="s1"> { </span><span class="s2">transform:</span><span class="s1"> </span><span class="s10">scale(</span><span class="s9">1.2</span><span class="s10">)</span><span class="s1">; </span><span class="s2">opacity:</span><span class="s1"> </span><span class="s9">1</span><span class="s1">; }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.animate-heart</span><span class="s5"> {</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">animation:</span><span class="s5"> </span><span class="s1">heartBreathe</span><span class="s5"> </span><span class="s9">1.2s</span><span class="s5"> </span><span class="s1">ease-in-out</span><span class="s5"> </span><span class="s1">infinite</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.cute-card</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius:</span><span class="s1"> </span><span class="s9">24px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s10">white</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow:</span><span class="s1"> </span><span class="s9">0</span><span class="s1"> </span><span class="s9">8px</span><span class="s1"> </span><span class="s9">20px</span><span class="s1"> </span><span class="s10">rgba(</span><span class="s9">255</span><span class="s1">, </span><span class="s9">182</span><span class="s1">, </span><span class="s9">193</span><span class="s1">, </span><span class="s9">0.2</span><span class="s10">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">input::-webkit-outer-spin-button</span><span class="s5">,</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">input::-webkit-inner-spin-button</span><span class="s5"> {</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">-webkit-appearance:</span><span class="s5"> </span><span class="s10">none</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin:</span><span class="s1"> </span><span class="s9">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.toast-enter</span><span class="s5"> {</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">animation:</span><span class="s5"> </span><span class="s1">slideIn</span><span class="s5"> </span><span class="s9">0.3s</span><span class="s5"> </span><span class="s1">ease-out</span><span class="s5"> </span><span class="s1">forwards</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">@keyframes</span><span class="s1"> </span><span class="s10">slideIn</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s10">from</span><span class="s1"> { </span><span class="s2">transform:</span><span class="s1"> </span><span class="s10">translateY(</span><span class="s9">100px</span><span class="s10">)</span><span class="s1">; </span><span class="s2">opacity:</span><span class="s1"> </span><span class="s9">0</span><span class="s1">; }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s10">to</span><span class="s1"> { </span><span class="s2">transform:</span><span class="s1"> </span><span class="s10">translateY(</span><span class="s9">0</span><span class="s10">)</span><span class="s1">; </span><span class="s2">opacity:</span><span class="s1"> </span><span class="s9">1</span><span class="s1">; }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">body</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-[#fff5f7] text-[#5d4037]"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"root"</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"text/babel"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const { useState, useEffect } = React;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>// </span><span class="s7">定義組件中會用到的圖示</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const Heart = () =&gt; &lt;i data-lucide="heart"&gt;&lt;/i&gt;;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const Send = () =&gt; &lt;i data-lucide="send"&gt;&lt;/i&gt;;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const RotateCw = () =&gt; &lt;i data-lucide="rotate-cw"&gt;&lt;/i&gt;;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const Plus = () =&gt; &lt;i data-lucide="plus"&gt;&lt;/i&gt;;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const Minus = () =&gt; &lt;i data-lucide="minus"&gt;&lt;/i&gt;;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const CheckCircle2 = () =&gt; &lt;i data-lucide="check-circle-2"&gt;&lt;/i&gt;;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const AlertCircle = () =&gt; &lt;i data-lucide="alert-circle"&gt;&lt;/i&gt;;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const Sparkles = () =&gt; &lt;i data-lucide="sparkles"&gt;&lt;/i&gt;;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const App = () =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const initialItems = [</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">茶葉</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 1, category: '</span><span class="s7">茶葉</span><span class="s1"> </span><span class="s12">🍵</span><span class="s1">', name: '</span><span class="s7">金萱青茶</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">包</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 2, category: '</span><span class="s7">茶葉</span><span class="s1"> </span><span class="s12">🍵</span><span class="s1">', name: '</span><span class="s7">重金萱</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">包</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 3, category: '</span><span class="s7">茶葉</span><span class="s1"> </span><span class="s12">🍵</span><span class="s1">', name: '</span><span class="s7">四季春茶</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">包</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 4, category: '</span><span class="s7">茶葉</span><span class="s1"> </span><span class="s12">🍵</span><span class="s1">', name: '</span><span class="s7">盧哈娜紅茶</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">包</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 5, category: '</span><span class="s7">茶葉</span><span class="s1"> </span><span class="s12">🍵</span><span class="s1">', name: '</span><span class="s7">蘭香綠茶</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">包</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 6, category: '</span><span class="s7">茶葉</span><span class="s1"> </span><span class="s12">🍵</span><span class="s1">', name: '</span><span class="s7">決明子紅茶</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">包</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 7, category: '</span><span class="s7">茶葉</span><span class="s1"> </span><span class="s12">🍵</span><span class="s1">', name: '</span><span class="s7">泰式手標紅茶</span><span class="s1">', threshold: 2, currentQty: 3, unit: '</span><span class="s7">包</span><span class="s1">', notified: false },</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">果醬</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 10, category: '</span><span class="s7">果醬</span><span class="s1"> </span><span class="s12">🍓</span><span class="s1">', name: '</span><span class="s7">荔枝醬</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">低於半罐</span><span class="s1">/300cc', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 11, category: '</span><span class="s7">果醬</span><span class="s1"> </span><span class="s12">🍓</span><span class="s1">', name: '</span><span class="s7">百香醬</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">低於半罐</span><span class="s1">/300cc', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 12, category: '</span><span class="s7">果醬</span><span class="s1"> </span><span class="s12">🍓</span><span class="s1">', name: '</span><span class="s7">紅柚醬</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">低於半罐</span><span class="s1">/300cc', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 13, category: '</span><span class="s7">果醬</span><span class="s1"> </span><span class="s12">🍓</span><span class="s1">', name: '</span><span class="s7">芒果醬</span><span class="s1">(</span><span class="s7">櫃檯</span><span class="s1">)', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">庫存</span><span class="s1">0</span><span class="s7">且櫃檯少於</span><span class="s1">300cc', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 14, category: '</span><span class="s7">果醬</span><span class="s1"> </span><span class="s12">🍓</span><span class="s1">', name: '</span><span class="s7">蜂蜜醬</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">庫存</span><span class="s1">0</span><span class="s7">且櫃檯少於</span><span class="s1">300cc', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 15, category: '</span><span class="s7">果醬</span><span class="s1"> </span><span class="s12">🍓</span><span class="s1">', name: '</span><span class="s7">藍柑橘</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">庫存</span><span class="s1">0</span><span class="s7">且櫃檯少於</span><span class="s1">300cc', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 16, category: '</span><span class="s7">果醬</span><span class="s1"> </span><span class="s12">🍓</span><span class="s1">', name: '</span><span class="s7">蔓越莓醬</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">庫存</span><span class="s1">0</span><span class="s7">且櫃檯少於</span><span class="s1">300cc', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 17, category: '</span><span class="s7">果醬</span><span class="s1"> </span><span class="s12">🍓</span><span class="s1">', name: '</span><span class="s7">蘋果醬</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">庫存</span><span class="s1">0</span><span class="s7">且櫃檯少於</span><span class="s1">300cc', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 18, category: '</span><span class="s7">果醬</span><span class="s1"> </span><span class="s12">🍓</span><span class="s1">', name: '</span><span class="s7">藍莓醬</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">庫存</span><span class="s1">0</span><span class="s7">且櫃檯少於</span><span class="s1">300cc', notified: false },</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">凍果汁</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 20, category: '</span><span class="s7">凍果汁</span><span class="s1"> </span><span class="s12">🍹</span><span class="s1">', name: '</span><span class="s7">檸檬汁</span><span class="s1">', threshold: 0.1, currentQty: 1, unit: '</span><span class="s7">庫存</span><span class="s1">', desc: '</span><span class="s7">冷凍無庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 21, category: '</span><span class="s7">凍果汁</span><span class="s1"> </span><span class="s12">🍹</span><span class="s1">', name: '</span><span class="s7">芒果汁</span><span class="s1">', threshold: 0.1, currentQty: 1, unit: '</span><span class="s7">庫存</span><span class="s1">', desc: '</span><span class="s7">冷凍無庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 22, category: '</span><span class="s7">凍果汁</span><span class="s1"> </span><span class="s12">🍹</span><span class="s1">', name: '</span><span class="s7">甘蔗汁</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">庫存</span><span class="s1">', desc: '</span><span class="s7">冷凍剩</span><span class="s1">1</span><span class="s7">庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 23, category: '</span><span class="s7">凍果汁</span><span class="s1"> </span><span class="s12">🍹</span><span class="s1">', name: '</span><span class="s7">百香果汁</span><span class="s1">', threshold: 0.1, currentQty: 1, unit: '</span><span class="s7">庫存</span><span class="s1">', desc: '</span><span class="s7">冷凍無庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 24, category: '</span><span class="s7">凍果汁</span><span class="s1"> </span><span class="s12">🍹</span><span class="s1">', name: '</span><span class="s7">柳丁汁</span><span class="s1">', threshold: 0.1, currentQty: 1, unit: '</span><span class="s7">庫存</span><span class="s1">', desc: '</span><span class="s7">冷凍無庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">哈蒂廠商</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 30, category: '</span><span class="s7">哈蒂廠商</span><span class="s1"> </span><span class="s12">📦</span><span class="s1">', name: '</span><span class="s7">煉乳</span><span class="s1">', threshold: 0.1, currentQty: 1, unit: '</span><span class="s7">瓶</span><span class="s1">', desc: '</span><span class="s7">冰箱無庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 31, category: '</span><span class="s7">哈蒂廠商</span><span class="s1"> </span><span class="s12">📦</span><span class="s1">', name: '</span><span class="s7">奶精</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">包</span><span class="s1">', desc: '</span><span class="s7">櫥櫃剩</span><span class="s1">1</span><span class="s7">需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 32, category: '</span><span class="s7">哈蒂廠商</span><span class="s1"> </span><span class="s12">📦</span><span class="s1">', name: '</span><span class="s7">冬瓜塊</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">塊</span><span class="s1">', desc: '</span><span class="s7">櫥櫃剩</span><span class="s1">1</span><span class="s7">需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 33, category: '</span><span class="s7">哈蒂廠商</span><span class="s1"> </span><span class="s12">📦</span><span class="s1">', name: '</span><span class="s7">珍珠</span><span class="s1">', threshold: 0.33, currentQty: 1, unit: '</span><span class="s7">包</span><span class="s1">', desc: '</span><span class="s7">剩</span><span class="s1">1/3</span><span class="s7">包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 34, category: '</span><span class="s7">哈蒂廠商</span><span class="s1"> </span><span class="s12">📦</span><span class="s1">', name: '</span><span class="s7">蔗糖</span><span class="s1">', threshold: 0.33, currentQty: 1, unit: '</span><span class="s7">桶</span><span class="s1">', desc: '</span><span class="s7">剩</span><span class="s1">1/3</span><span class="s7">桶需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 35, category: '</span><span class="s7">哈蒂廠商</span><span class="s1"> </span><span class="s12">📦</span><span class="s1">', name: '</span><span class="s7">粗吸管</span><span class="s1">', threshold: 2, currentQty: 4, unit: '</span><span class="s7">包</span><span class="s1">', desc: '</span><span class="s7">剩</span><span class="s1">2</span><span class="s7">包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 36, category: '</span><span class="s7">哈蒂廠商</span><span class="s1"> </span><span class="s12">📦</span><span class="s1">', name: '</span><span class="s7">細吸管</span><span class="s1">', threshold: 2, currentQty: 4, unit: '</span><span class="s7">包</span><span class="s1">', desc: '</span><span class="s7">剩</span><span class="s1">2</span><span class="s7">包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">粉類</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 40, category: '</span><span class="s7">粉類</span><span class="s1"> </span><span class="s12">✨</span><span class="s1">', name: '</span><span class="s7">奶酪粉</span><span class="s1">', threshold: 0.33, currentQty: 1, unit: '</span><span class="s7">包</span><span class="s1">', desc: '</span><span class="s7">開封剩</span><span class="s1">1/3</span><span class="s7">需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 41, category: '</span><span class="s7">粉類</span><span class="s1"> </span><span class="s12">✨</span><span class="s1">', name: '</span><span class="s7">黑芝麻粉</span><span class="s1">', threshold: 200, currentQty: 500, unit: '</span><span class="s7">克</span><span class="s1">', desc: '</span><span class="s7">櫥櫃剩</span><span class="s1">0</span><span class="s7">且檯面少於</span><span class="s1">200g', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 42, category: '</span><span class="s7">粉類</span><span class="s1"> </span><span class="s12">✨</span><span class="s1">', name: '</span><span class="s7">抹茶粉</span><span class="s1">', threshold: 200, currentQty: 500, unit: '</span><span class="s7">克</span><span class="s1">', desc: '</span><span class="s7">櫥櫃剩</span><span class="s1">0</span><span class="s7">且檯面少於</span><span class="s1">200g', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 43, category: '</span><span class="s7">粉類</span><span class="s1"> </span><span class="s12">✨</span><span class="s1">', name: '</span><span class="s7">可可粉</span><span class="s1">', threshold: 200, currentQty: 500, unit: '</span><span class="s7">克</span><span class="s1">', desc: '</span><span class="s7">櫥櫃剩</span><span class="s1">0</span><span class="s7">且檯面少於</span><span class="s1">200g', notified: false },</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">豆類</span><span class="s1">/</span><span class="s7">五穀</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 50, category: '</span><span class="s7">豆類</span><span class="s1">/</span><span class="s7">五穀</span><span class="s1"> </span><span class="s12">🌾</span><span class="s1">', name: '</span><span class="s7">綠豆</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">包</span><span class="s1">', desc: '</span><span class="s7">櫥櫃剩</span><span class="s1">1</span><span class="s7">包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 51, category: '</span><span class="s7">豆類</span><span class="s1">/</span><span class="s7">五穀</span><span class="s1"> </span><span class="s12">🌾</span><span class="s1">', name: '</span><span class="s7">二砂</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">無庫存僅剩半罐需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 52, category: '</span><span class="s7">豆類</span><span class="s1">/</span><span class="s7">五穀</span><span class="s1"> </span><span class="s12">🌾</span><span class="s1">', name: '</span><span class="s7">紅糖液</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">包</span><span class="s1">', desc: '</span><span class="s7">庫存</span><span class="s1">0</span><span class="s7">且冰箱剩半包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">酷朋訂貨</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 60, category: '</span><span class="s7">酷朋訂貨</span><span class="s1"> </span><span class="s12">🛒</span><span class="s1">', name: '</span><span class="s7">奶水</span><span class="s1">', threshold: 0.1, currentQty: 1, unit: '</span><span class="s7">罐</span><span class="s1">', desc: '</span><span class="s7">櫥櫃無庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 61, category: '</span><span class="s7">酷朋訂貨</span><span class="s1"> </span><span class="s12">🛒</span><span class="s1">', name: '</span><span class="s7">衛生紙</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">包</span><span class="s1">', desc: '</span><span class="s7">庫存剩</span><span class="s1">1</span><span class="s7">包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 62, category: '</span><span class="s7">酷朋訂貨</span><span class="s1"> </span><span class="s12">🛒</span><span class="s1">', name: '</span><span class="s7">沐浴乳</span><span class="s1">', threshold: 0.1, currentQty: 1, unit: '</span><span class="s7">瓶</span><span class="s1">', desc: '</span><span class="s7">無庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 63, category: '</span><span class="s7">酷朋訂貨</span><span class="s1"> </span><span class="s12">🛒</span><span class="s1">', name: '</span><span class="s7">洗碗精</span><span class="s1">', threshold: 0.1, currentQty: 1, unit: '</span><span class="s7">瓶</span><span class="s1">', desc: '</span><span class="s7">無庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 64, category: '</span><span class="s7">酷朋訂貨</span><span class="s1"> </span><span class="s12">🛒</span><span class="s1">', name: '</span><span class="s7">保鮮膜</span><span class="s1">', threshold: 0.1, currentQty: 1, unit: '</span><span class="s7">捲</span><span class="s1">', desc: '</span><span class="s7">無庫存需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">容器</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 70, category: '</span><span class="s7">容器</span><span class="s1"> </span><span class="s12">🥤</span><span class="s1">', name: '</span><span class="s7">奶酪杯</span><span class="s1">', threshold: 1, currentQty: 2, unit: '</span><span class="s7">條</span><span class="s1">', desc: '</span><span class="s7">剩</span><span class="s1">1</span><span class="s7">條需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 71, category: '</span><span class="s7">容器</span><span class="s1"> </span><span class="s12">🥤</span><span class="s1">', name: '</span><span class="s7">小鬆餅盒</span><span class="s1">', threshold: 20, currentQty: 50, unit: '</span><span class="s7">個</span><span class="s1">', desc: '</span><span class="s7">少於</span><span class="s1">20</span><span class="s7">個需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 72, category: '</span><span class="s7">容器</span><span class="s1"> </span><span class="s12">🥤</span><span class="s1">', name: '</span><span class="s7">大鬆餅盒</span><span class="s1">', threshold: 20, currentQty: 50, unit: '</span><span class="s7">個</span><span class="s1">', desc: '</span><span class="s7">少於</span><span class="s1">20</span><span class="s7">個需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 73, category: '</span><span class="s7">容器</span><span class="s1"> </span><span class="s12">🥤</span><span class="s1">', name: '</span><span class="s7">叉子</span><span class="s1">', threshold: 20, currentQty: 50, unit: '</span><span class="s7">支</span><span class="s1">', desc: '</span><span class="s7">少於</span><span class="s1">20</span><span class="s7">支需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 74, category: '</span><span class="s7">容器</span><span class="s1"> </span><span class="s12">🥤</span><span class="s1">', name: '</span><span class="s7">湯匙</span><span class="s1">', threshold: 10, currentQty: 20, unit: '</span><span class="s7">支</span><span class="s1">', desc: '</span><span class="s7">少於</span><span class="s1">10</span><span class="s7">支需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">烘焙類</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 80, category: '</span><span class="s7">烘焙類</span><span class="s1"> </span><span class="s12">🥐</span><span class="s1">', name: '</span><span class="s7">低筋麵粉</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">包</span><span class="s1">(kg)', desc: '1kg</span><span class="s7">剩小於半包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 81, category: '</span><span class="s7">烘焙類</span><span class="s1"> </span><span class="s12">🥐</span><span class="s1">', name: '</span><span class="s7">中筋麵粉</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">包</span><span class="s1">(kg)', desc: '1kg</span><span class="s7">剩小於半包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 82, category: '</span><span class="s7">烘焙類</span><span class="s1"> </span><span class="s12">🥐</span><span class="s1">', name: '</span><span class="s7">高筋麵粉</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">包</span><span class="s1">(kg)', desc: '1kg</span><span class="s7">剩小於半包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 83, category: '</span><span class="s7">烘焙類</span><span class="s1"> </span><span class="s12">🥐</span><span class="s1">', name: '</span><span class="s7">玉米澱粉</span><span class="s1">', threshold: 0.5, currentQty: 1, unit: '</span><span class="s7">包</span><span class="s1">(kg)', desc: '1kg</span><span class="s7">剩小於半包需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 84, category: '</span><span class="s7">烘焙類</span><span class="s1"> </span><span class="s12">🥐</span><span class="s1">', name: '</span><span class="s7">奶油</span><span class="s1">', threshold: 150, currentQty: 454, unit: '</span><span class="s7">克</span><span class="s1">', desc: '454g</span><span class="s7">剩小於</span><span class="s1">150g</span><span class="s7">需告知</span><span class="s1">', notified: false },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>];</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const [items, setItems] = useState(initialItems);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const [date] = useState(new Date().toLocaleDateString());</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const [toast, setToast] = useState({ show: false, message: '' });</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>useEffect(() =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>// </span><span class="s7">每次渲染後初始化</span><span class="s1"> Lucide </span><span class="s7">圖示</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>lucide.createIcons();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}, [items, toast]);</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const showToast = (msg) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setToast({ show: true, message: msg });</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; setToast({ show: false, message: '' }), 3000);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const updateQty = (id, newQty) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>if (newQty === '') {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>setItems(items.map(item =&gt; item.id === id ? { ...item, currentQty: '' } : item));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>return;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>const val = parseFloat(newQty);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>if (isNaN(val)) return;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>const roundedVal = Math.round(val * 100) / 100;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setItems(items.map(item =&gt;<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>item.id === id ? { ...item, currentQty: Math.max(0, roundedVal) } : item</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const toggleNotified = (id) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setItems(items.map(item =&gt;<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>item.id === id ? { ...item, notified: !item.notified } : item</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const restockAll = () =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>let count = 0;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>const newItems = items.map(item =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>const current = parseFloat(item.currentQty) || 0;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>if (current &lt;= item.threshold) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>count++;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>let newQty = item.threshold * 3;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>if (item.unit === '</span><span class="s7">克</span><span class="s1">') newQty = 1000;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>if (item.name.includes('</span><span class="s7">麵粉</span><span class="s1">')) newQty = 2;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>if (item.name.includes('</span><span class="s7">奶油</span><span class="s1">')) newQty = 454;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>return { ...item, currentQty: newQty, notified: false };</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>return item;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setItems(newItems);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>showToast(`</span><span class="s12">✨</span><span class="s1"> </span><span class="s7">已經幫你補滿</span><span class="s1"> ${count} </span><span class="s7">項寶貝囉！</span><span class="s1">`);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const sendToLine = () =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>const lowStockItems = items.filter(item =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>const current = parseFloat(item.currentQty) || 0;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>return current &lt;= item.threshold;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>if (lowStockItems.length === 0) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>showToast("</span><span class="s12">🌸</span><span class="s1"> </span><span class="s7">目前庫存都很足夠唷！不需要傳送～</span><span class="s1">");</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>return;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>let message = `</span><span class="s12">🎀</span><span class="s1"> </span><span class="s7">每日清點小幫手</span><span class="s1"> (${date}) </span><span class="s12">🎀</span><span class="s1">\n\n</span><span class="s12">⚠️</span><span class="s1"> </span><span class="s7">這些寶貝快用完了：</span><span class="s1">\n`;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>lowStockItems.forEach(item =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>const current = item.currentQty === '' ? 0 : item.currentQty;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>message += `</span><span class="s12">🍭</span><span class="s1"> ${item.name}: </span><span class="s7">剩</span><span class="s1"> ${current}${item.unit}\n`;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>message += `\n</span><span class="s7">記得要補貨唷！啾咪～</span><span class="s1">(</span><span class="s7">｡</span><span class="s1">◕∀◕</span><span class="s7">｡</span><span class="s1">)`;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>const lineUrl = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>showToast("</span><span class="s12">🚀</span><span class="s1"> </span><span class="s7">正在為您開啟</span><span class="s1"> LINE...");</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>window.open(lineUrl, '_blank');</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}, 500);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>const categories = [...new Set(items.map(item =&gt; item.category))];</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>return (</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className="min-h-screen p-4 md:p-8"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>{/* Toast */}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>{toast.show &amp;&amp; (</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 bg-[#5d4037] text-white px-6 py-3 rounded-full shadow-2xl font-bold toast-enter border-2 border-[#ffb6c1]"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>{toast.message}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>)}</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>{/* Header */}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="max-w-5xl mx-auto cute-card p-6 mb-8 border-2 border-[#ffdae0]"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="flex flex-col md:flex-row justify-between items-center gap-6"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="text-center md:text-left"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;h1 className="text-3xl font-black text-[#ff8fa3] flex items-center justify-center md:justify-start gap-2"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;span className="text-yellow-400"&gt;</span><span class="s12">✨</span><span class="s1">&lt;/span&gt; </span><span class="s7">每日清點小本本</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/h1&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p className="text-[#ffb6c1] font-bold mt-2 tracking-widest"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s12">🗓️</span><span class="s1"> </span><span class="s7">今天是</span><span class="s1"> {date}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="flex gap-4 w-full md:w-auto"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>onClick={restockAll}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>className="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-[#e0f7f1] text-[#2d6a4f] rounded-2xl font-bold hover:bg-[#c1e9df] transition-all border-b-4 border-[#add9cc] active:border-b-0 active:translate-y-1"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="rotate-cw" className="w-5 h-5"&gt;&lt;/i&gt; </span><span class="s7">一鍵補滿</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/button&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>onClick={sendToLine}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>className="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-[#ff8fa3] text-white rounded-2xl font-bold hover:bg-[#ff758f] transition-all shadow-lg border-b-4 border-[#e63946] active:translate-y-1 active:border-b-0"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="send" className="w-5 h-5"&gt;&lt;/i&gt; </span><span class="s7">傳送</span><span class="s1"> LINE</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/button&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>{/* Content */}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="max-w-5xl mx-auto space-y-10"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>{categories.map(cat =&gt; (</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div key={cat} className="space-y-4"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;div className="flex items-center gap-2 ml-2"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;div className="bg-[#ff8fa3] w-2 h-8 rounded-full"&gt;&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;h2 className="text-xl font-black text-[#8d6e63] tracking-wider"&gt;{cat}&lt;/h2&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>{items.filter(i =&gt; i.category === cat).map(item =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                        </span>const currentNum = parseFloat(item.currentQty) || 0;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                        </span>const isLow = item.currentQty !== '' &amp;&amp; currentNum &lt;= item.threshold;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                        </span>return (</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;div<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>key={item.id}<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>className={`cute-card p-5 border-2 transition-all relative overflow-hidden ${isLow ? 'border-[#ffb6c1] bg-[#fffafb]' : 'border-transparent'}`}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                            </span>&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>{isLow &amp;&amp; (</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;div className="absolute -right-2 -top-2 opacity-10 text-[#ff8fa3]"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;i data-lucide="heart" className="w-20 h-20 fill-current"&gt;&lt;/i&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>)}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex justify-between items-start mb-4"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;div className="flex items-center gap-2"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>{isLow ? (</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>&lt;div className="text-[#ff4d6d] animate-heart"&gt;&lt;i data-lucide="heart" className="w-5 h-5 fill-current"&gt;&lt;/i&gt;&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>) : (</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>&lt;div className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center"&gt;&lt;div className="w-2 h-2 bg-emerald-400 rounded-full"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>)}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;span className="font-black text-lg text-[#5d4037]"&gt;{item.name}&lt;/span&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>{item.desc &amp;&amp; (</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;div className="group relative"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>&lt;i data-lucide="alert-circle" className="w-4 h-4 text-[#ffccd5] cursor-help hover:text-[#ff8fa3]"&gt;&lt;/i&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>&lt;div className="absolute hidden group-hover:block bottom-full right-0 mb-2 w-48 bg-[#5d4037] text-white text-xs p-3 rounded-2xl shadow-xl z-10 leading-relaxed"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                                </span></span><span class="s12">💡</span><span class="s1"> {item.desc}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>)}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex items-center justify-between gap-2 mb-5"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;div className="flex items-center bg-[#fff0f3] rounded-2xl p-1.5 border border-[#ffdae0]"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>onClick={() =&gt; updateQty(item.id, (parseFloat(item.currentQty) || 0) - (item.threshold &lt; 1 ? 0.1 : 1))}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm hover:text-[#ff8fa3] active:scale-90"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>&lt;i data-lucide="minus" className="w-4 h-4"&gt;&lt;/i&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;/button&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;input<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>type="number"<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>step="any"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>value={item.currentQty}<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>onChange={(e) =&gt; updateQty(item.id, e.target.value)}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>className="w-20 bg-transparent text-center font-black text-[#ff8fa3] text-xl outline-none"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>/&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>onClick={() =&gt; updateQty(item.id, (parseFloat(item.currentQty) || 0) + (item.threshold &lt; 1 ? 0.1 : 1))}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>className="w-8 h-8 flex items-center justify-center bg-white rounded-xl shadow-sm hover:text-[#ff8fa3] active:scale-90"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>&lt;i data-lucide="plus" className="w-4 h-4"&gt;&lt;/i&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;/button&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;span className="text-sm font-bold text-[#bcaaa4]"&gt;{item.unit}&lt;/span&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex items-center justify-between"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>onClick={() =&gt; toggleNotified(item.id)}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black transition-all ${</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>item.notified<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>? 'bg-[#e0f2f1] text-[#009688] shadow-inner'<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                            </span>: 'bg-[#f5f5f5] text-[#9e9e9e] hover:bg-[#eeeeee]'</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>}`}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>&lt;i data-lucide="check-circle-2" className="w-4 h-4"&gt;&lt;/i&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>{item.notified ? '</span><span class="s7">好哩！已告知</span><span class="s1">' : '</span><span class="s7">還沒說</span><span class="s1">'}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;/button&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>onClick={() =&gt; updateQty(item.id, item.threshold * 2)}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span>className="text-xs font-black text-[#ff8fa3] hover:text-[#ff4d6d] underline decoration-dotted underline-offset-4"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                        </span></span><span class="s7">點我補貨</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;/button&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                        </span>);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                    </span>})}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>))}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="max-w-5xl mx-auto mt-16 mb-12 text-center text-[#ffb6c1] text-xs font-bold"&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s12">💖</span><span class="s1"> </span><span class="s7">每一口美味，都是因為有你細心打理</span><span class="s1"> </span><span class="s12">💖</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>const root = ReactDOM.createRoot(document.getElementById('root'));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>root.render(&lt;App /&gt;);</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-</body>
-</html>
+import React, { useState, useEffect, useMemo } from 'react';
+import { 
+  Heart, 
+  Check, 
+  Plus, 
+  Minus, 
+  Search, 
+  Star, 
+  Zap, 
+  ClipboardCopy, 
+  ListTodo, 
+  ArrowLeft, 
+  Smartphone, 
+  RotateCcw,
+  Save,
+  Truck,
+  Coffee,
+  MessageCircle
+} from 'lucide-react';
+
+// 本地存儲的 Key
+const STORAGE_KEY = 'CUTE_INVENTORY_LOCAL_V1_FINAL_NO_HIST';
+
+// 初始品項數據 (包含 full 欄位代表補滿後的數量)
+const INITIAL_DATA = [
+  // 茶葉
+  { id: 45, category: '茶葉 🍵', name: '四季春茶', threshold: 1, full: 5, unit: '包', current: 0, notified: false },
+  { id: 1, category: '茶葉 🍵', name: '金萱青茶', threshold: 1, full: 5, unit: '包', current: 0, notified: false },
+  { id: 2, category: '茶葉 🍵', name: '重金萱', threshold: 0.5, full: 3, unit: '包', current: 0, notified: false },
+  { id: 3, category: '茶葉 🍵', name: '盧哈娜紅茶', threshold: 1, full: 5, unit: '包', current: 0, notified: false },
+  { id: 4, category: '茶葉 🍵', name: '蘭香綠茶', threshold: 1, full: 5, unit: '包', current: 0, notified: false },
+  { id: 5, category: '茶葉 🍵', name: '決明子紅茶', threshold: 1, full: 5, unit: '包', current: 0, notified: false },
+  { id: 6, category: '茶葉 🍵', name: '泰式手標紅茶', threshold: 2, full: 6, unit: '包', current: 0, notified: false },
+  // 果醬
+  { id: 7, category: '果醬 🍓', name: '荔枝醬', threshold: 0.5, full: 2, unit: '罐', info: '少於300cc', current: 0, notified: false },
+  { id: 8, category: '果醬 🍓', name: '百香醬', threshold: 0.5, full: 2, unit: '罐', info: '少於300cc', current: 0, notified: false },
+  { id: 9, category: '果醬 🍓', name: '紅柚醬', threshold: 0.5, full: 2, unit: '罐', info: '少於300cc', current: 0, notified: false },
+  { id: 10, category: '果醬 🍓', name: '芒果醬', threshold: 0.5, full: 2, unit: '罐', info: '少於300cc', current: 0, notified: false },
+  { id: 11, category: '果醬 🍓', name: '蜂蜜醬', threshold: 0.5, full: 2, unit: '罐', info: '少於300cc', current: 0, notified: false },
+  { id: 12, category: '果醬 🍓', name: '藍柑橘', threshold: 0.1, full: 1, unit: '瓶', info: '少於300cc', current: 0, notified: false },
+  { id: 13, category: '果醬 🍓', name: '蔓越莓醬', threshold: 0.1, full: 1, unit: '瓶', info: '少於300cc', current: 0, notified: false },
+  { id: 14, category: '果醬 🍓', name: '蘋果醬', threshold: 0.1, full: 1, unit: '瓶', info: '少於300cc', current: 0, notified: false },
+  { id: 15, category: '果醬 🍓', name: '藍莓醬', threshold: 0.1, full: 1, unit: '瓶', info: '少於300cc', current: 0, notified: false },
+  // 凍果汁
+  { id: 16, category: '凍果汁 ❄️', name: '檸檬汁', threshold: 0, full: 5, unit: '庫', info: '無庫存', current: 0, notified: false },
+  { id: 17, category: '凍果汁 ❄️', name: '芒果醬(凍)', threshold: 0, full: 5, unit: '庫', info: '無庫存', current: 0, notified: false },
+  { id: 18, category: '凍果汁 ❄️', name: '甘蔗汁', threshold: 1, full: 5, unit: '庫', info: '剩1', current: 0, notified: false },
+  { id: 19, category: '凍果汁 ❄️', name: '百香果汁', threshold: 0, full: 5, unit: '庫', info: '無庫存', current: 0, notified: false },
+  { id: 20, category: '凍果汁 ❄️', name: '柳丁汁', threshold: 0, full: 5, unit: '庫', info: '無庫存', current: 0, notified: false },
+  // 哈蒂廠商
+  { id: 21, category: '哈蒂 🚚', name: '煉乳', threshold: 0, full: 12, unit: '庫', info: '冰箱空', current: 0, notified: false },
+  { id: 22, category: '哈蒂 🚚', name: '奶精', threshold: 1, full: 10, unit: '庫', info: '剩1', current: 0, notified: false },
+  { id: 23, category: '哈蒂 🚚', name: '冬瓜塊', threshold: 1, full: 10, unit: '庫', info: '剩1', current: 0, notified: false },
+  { id: 24, category: '哈蒂 🚚', name: '珍珠', threshold: 0.33, full: 5, unit: '包', info: '剩1/3', current: 0, notified: false },
+  { id: 25, category: '哈蒂 🚚', name: '蔗糖', threshold: 0.33, full: 2, unit: '桶', info: '剩1/3', current: 0, notified: false },
+  { id: 26, category: '哈蒂 🚚', name: '粗吸管', threshold: 2, full: 10, unit: '包', current: 0, notified: false },
+  { id: 27, category: '哈蒂 🚚', name: '細吸管', threshold: 2, full: 10, unit: '包', current: 0, notified: false },
+  // 粉類
+  { id: 28, category: '粉類 🧂', name: '奶酪粉', threshold: 0.33, full: 3, unit: '包', info: '剩1/3', current: 0, notified: false },
+  { id: 29, category: '粉類 🧂', name: '黑芝麻粉', threshold: 0.1, full: 1, unit: '庫', info: '少於200g', current: 0, notified: false },
+  { id: 30, category: '粉類 🧂', name: '抹茶粉', threshold: 0.1, full: 1, unit: '庫', info: '少於200g', current: 0, notified: false },
+  { id: 31, category: '粉類 🧂', name: '可可粉', threshold: 0.1, full: 1, unit: '庫', info: '少於200g', current: 0, notified: false },
+  // 豆類
+  { id: 32, category: '豆類 🫘', name: '綠豆', threshold: 1, full: 5, unit: '包', info: '剩1', current: 0, notified: false },
+  // 五穀雜糧
+  { id: 33, category: '五穀 🌾', name: '二砂', threshold: 0.1, full: 10, unit: '庫', info: '剩半罐', current: 0, notified: false },
+  { id: 34, category: '五穀 🌾', name: '紅糖液', threshold: 0.1, full: 5, unit: '庫', info: '剩半包', current: 0, notified: false },
+  // 酷朋訂貨
+  { id: 35, category: '酷朋 📦', name: '奶水', threshold: 0, full: 12, unit: '庫', current: 0, notified: false },
+  { id: 36, category: '酷朋 📦', name: '衛生紙', threshold: 1, full: 12, unit: '包', current: 0, notified: false },
+  { id: 37, category: '酷朋 📦', name: '沐浴乳', threshold: 0, full: 3, unit: '庫', current: 0, notified: false },
+  { id: 38, category: '酷朋 📦', name: '洗碗精', threshold: 0, full: 5, unit: '庫', current: 0, notified: false },
+  { id: 39, category: '酷朋 📦', name: '保鮮膜', threshold: 0, full: 3, unit: '庫', current: 0, notified: false },
+  // 容器
+  { id: 40, category: '容器 🥤', name: '奶酪杯', threshold: 1, full: 10, unit: '條', current: 0, notified: false },
+  { id: 41, category: '容器 🥤', name: '小鬆餅盒', threshold: 20, full: 100, unit: '個', current: 0, notified: false },
+  { id: 42, category: '容器 🥤', name: '大鬆餅盒', threshold: 20, full: 100, unit: '個', current: 0, notified: false },
+  { id: 43, category: '容器 🥤', name: '叉子', threshold: 20, full: 200, unit: '支', current: 0, notified: false },
+  { id: 44, category: '容器 🥤', name: '湯匙', threshold: 10, full: 200, unit: '支', current: 0, notified: false },
+  { id: 46, category: '容器 🥤', name: '2杯袋', threshold: 20, full: 100, unit: '個', current: 0, notified: false },
+  { id: 47, category: '容器 🥤', name: '4杯袋', threshold: 20, full: 100, unit: '個', current: 0, notified: false },
+  { id: 48, category: '容器 🥤', name: '6杯袋', threshold: 20, full: 100, unit: '個', current: 0, notified: false },
+];
+
+export default function App() {
+  const [items, setItems] = useState(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        const existingIds = new Set(parsed.map(i => i.id));
+        const missingItems = INITIAL_DATA.filter(i => !existingIds.has(i.id));
+        const syncedItems = parsed.map(item => {
+          const original = INITIAL_DATA.find(i => i.id === item.id);
+          return original ? { ...item, full: original.full, threshold: original.threshold, category: original.category } : item;
+        });
+        return [...syncedItems, ...missingItems];
+      } catch (e) { return INITIAL_DATA; }
+    }
+    return INITIAL_DATA;
+  });
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [view, setView] = useState('all'); 
+  const [showCopyMsg, setShowCopyMsg] = useState(false);
+  const [saveFlash, setSaveFlash] = useState(false);
+
+  // 自動保存
+  const autoSave = (newItems) => {
+    setItems(newItems);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newItems));
+    setSaveFlash(true);
+    setTimeout(() => setSaveFlash(false), 500);
+  };
+
+  const updateQuantity = (id, delta) => {
+    const newItems = items.map(item => {
+      if (item.id === id) {
+        const newVal = Math.max(0, parseFloat((item.current + delta).toFixed(2)));
+        return { ...item, current: newVal };
+      }
+      return item;
+    });
+    autoSave(newItems);
+  };
+
+  const replenishItem = (id) => {
+    const newItems = items.map(item => {
+      if (item.id === id) {
+        return { ...item, current: item.full, notified: false };
+      }
+      return item;
+    });
+    autoSave(newItems);
+  };
+
+  const handleInputChange = (id, value) => {
+    const numValue = value === '' ? 0 : parseFloat(value);
+    const newItems = items.map(item => 
+      item.id === id ? { ...item, current: isNaN(numValue) ? 0 : numValue } : item
+    );
+    autoSave(newItems);
+  };
+
+  const toggleNotified = (id) => {
+    const newItems = items.map(item => 
+      item.id === id ? { ...item, notified: !item.notified } : item
+    );
+    autoSave(newItems);
+  };
+
+  const lowStockItems = useMemo(() => items.filter(i => i.current <= i.threshold), [items]);
+
+  const groupedItems = useMemo(() => {
+    const filtered = items.filter(item => 
+      item.name.includes(searchTerm) || item.category.includes(searchTerm)
+    );
+    return filtered.reduce((acc, item) => {
+      if (!acc[item.category]) acc[item.category] = [];
+      acc[item.category].push(item);
+      return acc;
+    }, {});
+  }, [items, searchTerm]);
+
+  const getMessageText = () => {
+    const timestamp = new Date().toLocaleString('zh-TW', { hour12: false });
+    const header = `媽媽/爸爸，這是今日(${timestamp})的補貨清單：\n--------------------\n`;
+    const body = lowStockItems.length > 0 
+      ? lowStockItems.map(i => `📍 ${i.name}: 剩 ${i.current} ${i.unit} ${i.info ? `[${i.info}]` : ''}`).join('\n')
+      : '目前庫存都很足夠喔！✨';
+    const footer = `\n--------------------\n如果有補充告訴我！❤️`;
+    return header + body + footer;
+  };
+
+  const copyToClipboard = () => {
+    const textToCopy = getMessageText();
+    const textArea = document.createElement("textarea");
+    textArea.value = textToCopy;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    setShowCopyMsg(true);
+    setTimeout(() => setShowCopyMsg(false), 2000);
+  };
+
+  const sendToLine = () => {
+    const textToCopy = getMessageText();
+    const lineUrl = `https://line.me/R/msg/text/?${encodeURIComponent(textToCopy)}`;
+    window.open(lineUrl, '_blank');
+  };
+
+  return (
+    <div className="min-h-screen bg-[#F8F4F1] p-3 md:p-6 font-sans text-[#4A3728]">
+      <div className="max-w-2xl mx-auto pb-40">
+        
+        {/* Header */}
+        <header className="bg-white rounded-[40px] shadow-xl shadow-stone-200 p-6 mb-6 border-4 border-[#DBC4B0]">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-3">
+              <div className="bg-[#8B5E3C] p-3 rounded-2xl rotate-3 shadow-md active:scale-110 transition-transform">
+                <Coffee className="text-white" size={32} />
+              </div>
+              <div>
+                <h1 className="text-2xl font-black text-[#5D4037] tracking-tighter">庫存點點名</h1>
+                <div className="flex items-center gap-1">
+                  <span className={`text-[12px] font-black flex items-center gap-0.5 transition-all ${saveFlash ? 'text-amber-600 scale-110' : 'text-stone-400'}`}>
+                    <Smartphone size={12}/> {saveFlash ? '自動存檔中...' : '資料已存入手機'}
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex bg-stone-100 p-1.5 rounded-2xl border border-stone-200 shadow-inner overflow-x-auto no-scrollbar">
+              <button onClick={() => setView('all')} className={`px-5 py-2.5 rounded-xl text-sm font-black transition-all whitespace-nowrap ${view === 'all' ? 'bg-[#A68A64] text-white shadow-md' : 'text-stone-400'}`}>清點</button>
+              <button onClick={() => setView('report')} className={`px-5 py-2.5 rounded-xl text-sm font-black transition-all whitespace-nowrap ${view === 'report' ? 'bg-[#A68A64] text-white shadow-md' : 'text-stone-400'}`}>告知</button>
+            </div>
+          </div>
+
+          {view === 'all' && (
+            <div className="relative">
+              <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-stone-300" size={20} />
+              <input 
+                type="text" 
+                placeholder="搜尋清單品項..." 
+                value={searchTerm} 
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-[#FAF7F2] border-2 border-stone-100 focus:border-[#DBC4B0] rounded-full outline-none font-bold text-base"
+              />
+            </div>
+          )}
+        </header>
+
+        {/* View Switch */}
+        {view === 'all' && (
+          <div className="space-y-5">
+            {Object.keys(groupedItems).map(category => (
+              <div key={category} className="bg-white rounded-[32px] border-2 border-[#E9E0D2] overflow-hidden shadow-sm">
+                <div className="bg-[#FCF9F7] px-6 py-3 border-b-2 border-[#E9E0D2]">
+                  <h2 className="font-black text-[#8B5E3C] text-[14px] uppercase tracking-widest flex items-center gap-2">
+                    <Star size={14} fill="#8B5E3C" /> {category}
+                  </h2>
+                </div>
+                <div className="divide-y-2 divide-[#F3EDE6]">
+                  {groupedItems[category].map((item) => {
+                    const isLow = item.current <= item.threshold;
+                    return (
+                      <div key={item.id} className={`flex items-center px-4 py-4 transition-all ${item.notified ? 'bg-stone-50 opacity-40' : (isLow ? 'bg-[#FFF2F2]' : 'hover:bg-stone-50')}`}>
+                        <div className="flex-shrink-0 w-10 flex justify-center">
+                          {isLow ? <Heart size={20} fill="#E7C6C6" className="text-[#E7C6C6] animate-pulse" /> : <div className="w-2.5 h-2.5 rounded-full bg-stone-200"></div>}
+                        </div>
+                        <div className="flex-grow flex flex-col overflow-hidden mr-2">
+                          <span className="font-black text-[#5D4037] whitespace-nowrap overflow-hidden text-ellipsis text-lg leading-tight">{item.name}</span>
+                          {item.info && <span className="text-[11px] font-black text-stone-400 whitespace-nowrap mt-0.5">{item.info}</span>}
+                        </div>
+                        
+                        <div className="flex-shrink-0 flex items-center gap-1.5 bg-white p-1 rounded-full border border-stone-200 mr-2 shadow-sm">
+                          <button 
+                            onClick={() => replenishItem(item.id)} 
+                            className="w-10 h-10 rounded-full bg-[#8E735B] flex items-center justify-center text-white active:scale-75 transition-all shadow-sm mr-1"
+                            title="快速補滿"
+                          >
+                            <Truck size={18} />
+                          </button>
+                          
+                          <button onClick={() => updateQuantity(item.id, -0.5)} className="w-9 h-9 rounded-full bg-stone-100 flex items-center justify-center text-stone-500 active:scale-75 transition-all"><Minus size={16} strokeWidth={4} /></button>
+                          <input type="number" step="0.1" value={item.current} onChange={(e) => handleInputChange(item.id, e.target.value)} className={`w-12 text-center bg-transparent font-black text-xl outline-none ${isLow ? 'text-red-800' : 'text-[#8B5E3C]'}`} />
+                          <button onClick={() => updateQuantity(item.id, 0.5)} className="w-9 h-9 rounded-full bg-stone-100 flex items-center justify-center text-stone-500 active:scale-75 transition-all"><Plus size={16} strokeWidth={4} /></button>
+                        </div>
+                        
+                        <button onClick={() => toggleNotified(item.id)} className={`flex-shrink-0 w-10 h-10 rounded-2xl flex items-center justify-center transition-all ${item.notified ? 'bg-[#D4A373] text-white rotate-6 scale-110 shadow-md' : 'bg-white border-2 border-stone-100 text-stone-200'}`}><Check size={22} strokeWidth={4} /></button>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+            
+            <div className="flex justify-center mt-8">
+                <button 
+                  onClick={() => { if(confirm('要重置目前所有數字嗎？')) autoSave(INITIAL_DATA); }}
+                  className="px-8 py-4 bg-white text-stone-300 rounded-[24px] border-2 border-stone-100 flex items-center justify-center gap-2 active:scale-95 transition-all font-bold text-sm"
+                >
+                  <RotateCcw size={18} /> 清空重盤
+                </button>
+            </div>
+          </div>
+        )}
+
+        {view === 'report' && (
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="bg-white rounded-[40px] p-8 border-4 border-dashed border-[#DBC4B0] text-center relative overflow-hidden shadow-xl">
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#F8F4F1] rounded-full opacity-50"></div>
+              <div className="w-20 h-20 bg-[#F3EDE6] rounded-full flex items-center justify-center mx-auto mb-4 scale-110"><Coffee className="text-[#8B5E3C]" size={40} /></div>
+              <h2 className="text-2xl font-black text-[#5D4037] mb-6 tracking-tight">補貨回報 🤎</h2>
+              <div className="text-left bg-[#FCF9F7] rounded-[32px] p-6 mb-6 font-mono text-base border-2 border-stone-100 leading-loose max-h-[400px] overflow-y-auto shadow-inner text-[#5D4037]">
+                <div className="whitespace-pre-wrap font-bold">{getMessageText()}</div>
+              </div>
+              
+              <div className="flex flex-col gap-3">
+                <button 
+                  onClick={sendToLine} 
+                  className="group flex items-center justify-center gap-3 w-full py-6 rounded-[28px] font-black bg-[#06C755] text-white shadow-lg active:scale-95 transition-all text-xl shadow-green-100"
+                >
+                  <MessageCircle size={28} /> 一鍵發送 LINE 告知
+                </button>
+                <button 
+                  onClick={copyToClipboard} 
+                  className="group flex items-center justify-center gap-3 w-full py-5 rounded-[24px] font-black border-2 border-[#8B5E3C] text-[#8B5E3C] active:scale-95 transition-all text-lg"
+                >
+                  <ClipboardCopy size={24} /> 僅複製內容
+                </button>
+              </div>
+
+              <button onClick={() => setView('all')} className="mt-8 text-stone-400 font-black text-base flex items-center justify-center gap-2 mx-auto transition-colors hover:text-stone-600"><ArrowLeft size={20} /> 返回清點</button>
+            </div>
+          </div>
+        )}
+
+        {/* 提示氣泡 */}
+        {showCopyMsg && (
+          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#5D4037]/95 text-white px-10 py-5 rounded-full font-black flex items-center gap-3 animate-bounce shadow-2xl z-50 text-lg">
+            <Zap fill="#D4A373" className="text-[#D4A373]" /> 複製成功
+          </div>
+        )}
+
+        {/* 底部導覽欄 */}
+        {view === 'all' && (
+          <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-2xl z-40">
+            <div className="flex items-center justify-between p-5 bg-[#5D4037] rounded-[36px] text-white shadow-2xl border-b-4 border-[#3E2723]">
+              <div className="flex gap-6 ml-4">
+                <div className="flex flex-col"><span className="text-[10px] font-black opacity-80 uppercase tracking-widest">警告</span><span className="text-2xl font-black text-[#E7C6C6]">{lowStockItems.length}</span></div>
+                <div className="w-px h-8 bg-white/20 self-center"></div>
+                <div className="flex flex-col"><span className="text-[10px] font-black opacity-80 uppercase tracking-widest">告知</span><span className="text-2xl font-black">{items.filter(i => i.notified).length}</span></div>
+              </div>
+              <button className="bg-[#A68A64] text-white px-8 py-4 rounded-[24px] font-black text-base flex items-center gap-2 active:scale-90 transition-all shadow-md" onClick={() => setView('report')}><ListTodo size={20} /> 告知清單</button>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #F8F4F1; margin: 0; padding: 0; overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
+        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .animate-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      ` }} />
+    </div>
+  );
+}
